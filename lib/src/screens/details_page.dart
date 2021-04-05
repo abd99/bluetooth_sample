@@ -18,7 +18,10 @@ class DetailsPage extends StatelessWidget {
     var textTheme = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Details'),
+        title: Text(
+          'Details',
+          style: textTheme.headline6,
+        ),
         elevation: 0.0,
       ),
       body: Center(
@@ -38,7 +41,7 @@ class DetailsPage extends StatelessWidget {
                 size: 200.0,
               ),
               Text(
-                device.name,
+                device.name ?? 'Unknown Device',
                 style: textTheme.headline5.copyWith(
                   fontWeight: FontWeight.bold,
                 ),

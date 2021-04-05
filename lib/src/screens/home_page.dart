@@ -76,9 +76,10 @@ class _DiscoveryPage extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: isDiscovering
-            ? Text('Discovering devices')
-            : Text('Discovered devices'),
+        title: Text(
+          isDiscovering ? 'Discovering devices' : 'Discovered devices',
+          style: Theme.of(context).textTheme.headline6,
+        ),
         actions: <Widget>[
           isDiscovering
               ? FittedBox(
